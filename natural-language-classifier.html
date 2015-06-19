@@ -1,0 +1,34 @@
+<script type="text/javascript">
+    RED.nodes.registerType('natural-language-classifier',{
+        category: 'IBM Watson',
+        color: '#8CC63F',
+        defaults: {
+	    classifier_id : {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "light.png",
+        label: function() {
+            return this.name||"natural language classifier";
+        },
+	paletteLabel: "natural language classifier"
+    });
+</script>
+
+<script type="text/x-red" data-template-name="natural-language-classifier">
+    <div class="form-row">
+        <label for="node-input-classifier_id"><i class="icon-tag"></i> classifier_id</label>
+	<input type="text" id="node-input-classifier_id" placeholder="classifier_id">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="natural-language-classifier">
+    <p>The IBM Watson Natural Language Classifier service enables developers without a background in machine learning or statistical algorithms to create machine-learning, natural language interfaces for their applications. The service interprets input text (questions or other) and returns a corresponding classification with associated confidence levels. The return value can then be used to trigger a corresponding action, such as redirecting the request or answering the question.
+</p>
+    <p>
+	A classifier is required, and the VCAP services must be available to provide credentials.  The classifier should already trained.
+</p>
+    <p>
+	The msg.payload is assumed to be the document to classify and must be less than 1024 characters long.  It is assumed that a classifier has been created.  For more information, see the <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/apis/#!/natural-language-classifier">documentation</a>
+    </p>
+</script>
