@@ -8,21 +8,21 @@ add/bind the service to your application in order for it to work.
 
 ## To add the service you can use cloudfoundry/cli (cf)
 
-` 
+``` 
 $ cf api https://api.ng.bluemix.net 
 $ cf login -u <your user ID>
-`
+```
 
 ## Create the service
 
-` 
+``` 
 $ cf create-service natural_language_classifier free natural-language-classifier-service
-`
+```
 
 ## Bind it to your app
-` 
+``` 
 $ cf bind-service my_app natural_language_classifier
-`
+```
 
 # Dependencies
 
