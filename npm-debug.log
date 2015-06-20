@@ -1,0 +1,56 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'login' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose adduser before first PUT { name: 'elmsley',
+4 verbose adduser   password: 'XXXXX',
+4 verbose adduser   email: 'jasonmah@gmail.com',
+4 verbose adduser   _id: 'org.couchdb.user:elmsley',
+4 verbose adduser   type: 'user',
+4 verbose adduser   roles: [],
+4 verbose adduser   date: '2015-06-19T14:25:29.963Z' }
+5 verbose request where is /-/user/org.couchdb.user:elmsley
+6 verbose request registry https://registry.npmjs.org/
+7 verbose request id 7598acadded99fb9
+8 verbose url raw /-/user/org.couchdb.user:elmsley
+9 verbose url resolving [ 'https://registry.npmjs.org/',
+9 verbose url resolving   './-/user/org.couchdb.user:elmsley' ]
+10 verbose url resolved https://registry.npmjs.org/-/user/org.couchdb.user:elmsley
+11 verbose request where is https://registry.npmjs.org/-/user/org.couchdb.user:elmsley
+12 info trying registry request attempt 1 at 10:25:29
+13 http PUT https://registry.npmjs.org/-/user/org.couchdb.user:elmsley
+14 http 400 https://registry.npmjs.org/-/user/org.couchdb.user:elmsley
+15 verbose headers { 'content-type': 'application/json',
+15 verbose headers   'cache-control': 'max-age=60',
+15 verbose headers   'content-length': '57',
+15 verbose headers   'accept-ranges': 'bytes',
+15 verbose headers   date: 'Fri, 19 Jun 2015 14:25:31 GMT',
+15 verbose headers   via: '1.1 varnish',
+15 verbose headers   connection: 'keep-alive',
+15 verbose headers   'x-served-by': 'cache-atl6227-ATL',
+15 verbose headers   'x-cache': 'MISS',
+15 verbose headers   'x-cache-hits': '0',
+15 verbose headers   'x-timer': 'S1434723931.024289,VS0,VE346' }
+16 verbose adduser back [ [Error: Unknown error while authenticating : -/user/org.couchdb.user:elmsley],
+16 verbose adduser   { ok: false, error: 'Unknown error while authenticating' },
+16 verbose adduser   '{"ok":false,"error":"Unknown error while authenticating"}' ]
+17 error Error: Unknown error while authenticating : -/user/org.couchdb.user:elmsley
+17 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:308:14)
+17 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:246:65)
+17 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:236:22)
+17 error     at Request.emit (events.js:98:17)
+17 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1142:14)
+17 error     at Request.emit (events.js:117:20)
+17 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1096:12)
+17 error     at IncomingMessage.emit (events.js:117:20)
+17 error     at _stream_readable.js:944:16
+17 error     at process._tickCallback (node.js:442:13)
+18 error If you need help, you may report this *entire* log,
+18 error including the npm and node versions, at:
+18 error     <http://github.com/npm/npm/issues>
+19 error System Darwin 14.3.0
+20 error command "node" "/usr/local/bin/npm" "login"
+21 error cwd /Users/jasonmah/nlc/node-red-natural-language-classifier
+22 error node -v v0.10.35
+23 error npm -v 1.4.28
+24 verbose exit [ 1, true ]
